@@ -1,6 +1,6 @@
 <div class="container">
   <ul class="list-group feed">
-    <% @feed.first(5).each do |user| %>
+    <% @feed.each do |user| %>
       <li class="list-group-item user">
         <img src="<%= user['actor']['picture'] %>">
         <p><%= user['actor']['username']%> 🗣</p>
@@ -9,4 +9,3 @@
     <% end %>
   </ul>
 </div>
-
