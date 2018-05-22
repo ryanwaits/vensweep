@@ -1,0 +1,14 @@
+<div class="container">
+  <ul class="list-group feed">
+    <% @feed.first(5).each do |user| %>
+      <li class="list-group-item user">
+        <img src="<%= user['actor']['picture'] %>">
+        <p><%= user['actor']['username']%> 🗣</p>
+        <span class="message"><%= user['message']%></span>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<p><%= @feed.inspect %></p>
+
